@@ -1,0 +1,16 @@
+extends layout
+ 
+block content
+  .row.banner
+    .col-12
+      h1= course.name 
+  .row 
+    .col-12.col-md-8
+      h2= course.info
+  a.btn.btn-info.float-left(href="/courses") Courses 
+  //a.btn.btn-primary.float-left(href=`/courses/delete/${course.id}`) DELETE
+  .row
+    .col-12.col-md-8
+      form(action="", method="", role="form")
+        button.btn.btn-danger(formaction=`/courses/delete/${course.id}` type="submit") Delete
+    .col-12.col-md-4 
